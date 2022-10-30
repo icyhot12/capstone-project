@@ -38,6 +38,8 @@ function ContextProvider(props) {
         })
     }
 
+    // nie do końca działa - nie chce usuwać pierwszego dodanego ??
+
     return (
         <Context.Provider value={{ photoData, toggleFavorite, addToCart, cartItems, removeFromCart }}>
             {props.children}
