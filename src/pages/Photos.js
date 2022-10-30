@@ -11,9 +11,9 @@ function Photos() {
     const allPhotos = photoData.map(image => {
         return (
             <Image 
-            key={image.id} 
-            source={image.url}
+            key={image.id}
             className={getClass(image.id)}
+            img={image}
             />
         )
     })
