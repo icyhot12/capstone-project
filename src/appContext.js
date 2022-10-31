@@ -29,19 +29,12 @@ function ContextProvider(props) {
         setCartItems(prevCartItems => [...prevCartItems, img])
     }
 
-    function removeFromCart(img) {
-        let removedItem = cartItems.indexOf(img)
-        setCartItems(prevCartItems => {
-            let tempArray = [].concat(prevCartItems)
-            tempArray.splice(removedItem,removedItem)
-            return tempArray
-        })
+    function removeFromCart(id) {
+        setCartItems(prevCartItems => prevCartItems.filter(element => element.id !== id))
     }
 
-    // nie do końca działa - nie chce usuwać pierwszego dodanego ??
-
     return (
-        <Context.Provider value={{ photoData, toggleFavorite, addToCart, cartItems, removeFromCart }}>
+        <Context.Provider value={{ photoData, toggleFavorite, addToCart, cartItems, removeFromCart, setCartItems }}>
             {props.children}
         </Context.Provider>
     )
