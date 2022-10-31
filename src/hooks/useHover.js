@@ -29,3 +29,6 @@ function useHover() {
 }
 
 export default useHover
+
+
+// ogarnąć useRef, o co chodziło z błędem, ogarnąć customhook - zastsosowanie ?
